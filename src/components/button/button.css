@@ -3,15 +3,27 @@
     border: 2px solid #000;
     color:  #000;
 }
-.button:hover a {
+a{
+    color:  #000;
+}
+
+.button:hover>a {
     color:white;
     text-decoration: none !important;
 }
-.button:hover, focus, active{
+.button:hover>a, focus, active{
     background-color: #000 !important;
     border: 2px solid #000 !important;
+    text-decoration: none !important;
 }
-a{
-    color:  #000;
-    text-decoration: none;
+
+.btn-secondary:hover {
+    color: #fff;
+    background-color: #000;
+    border-color: #000;
+}
+.btn-secondary:not(:disabled):not(.disabled).active, .btn-secondary:not(:disabled):not(.disabled):active, .show>.btn-secondary.dropdown-toggle {
+    color: #fff;
+    background-color: #000;
+    border-color: #000;
 }

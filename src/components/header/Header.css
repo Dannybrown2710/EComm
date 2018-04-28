@@ -12,5 +12,9 @@ li>a{
     text-decoration: none !important;
 }
 a:hover{
-    border-bottom: 2px solid #ffd307;
+    border-bottom: 2px solid #ffffff;
+}
+
+.tabHeading>a{
+    color: #444444 !important;
 }

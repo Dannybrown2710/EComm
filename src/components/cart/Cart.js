@@ -6,7 +6,6 @@ import Card from "../card/Card";
 import Slider from 'react-slick';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import banner1 from "../../images/optimised/banner1.jpg";
 
 const images = require.context('../../images', true);
 
