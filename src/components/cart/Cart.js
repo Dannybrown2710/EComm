@@ -3,9 +3,6 @@ import './Cart.css';
 import SuccessOutlineButton from '../button/Button';
 import { Container, Row, Col, Button, Carousel, UncontrolledCarousel, CarouselItem, CarouselControl, CarouselIndicators, CarouselCaption } from "reactstrap";
 import Card from "../card/Card";
-import Slider from 'react-slick';
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
 
 const images = require.context('../../images', true);
 

@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
-import {
-    TabContent, TabPane, Button, Collapse, Nav, NavItem, NavLink, Navbar, NavbarToggler, NavbarBrand,
-    Row, Col, Modal, ModalHeader, ModalBody, ModalFooter, Form, FormGroup, Label, Input, FormText
-} from 'reactstrap'
+import { TabContent, TabPane, Button, Collapse, Nav, NavItem, NavLink, Navbar, NavbarToggler, NavbarBrand,
+    Row, Col, Modal, ModalBody, Form, FormGroup, Label, Input } from 'reactstrap'
 import './Header.css';
 import classnames from 'classnames';
 import SuccessOutlineButton from '../button/Button';
@@ -46,7 +44,7 @@ class Header extends Component {
         return (
             <div>
                 <Modal isOpen={this.state.modal} toggle={this.toggle} className={this.props.className}>
-                    <ModalBody>
+                    <ModalBody className="fontFamily">
                         <Nav tabs>
                             <NavItem className="tabHeading">
                                 <NavLink
@@ -68,25 +66,37 @@ class Header extends Component {
                         <TabContent activeTab={this.state.activeTab}>
                             <TabPane tabId="1">
                                 <Row>
-                                    <Col sm="12" className="mt-4">
-                                        <h4>Tab 1 Contents</h4>
+                                    <Col sm="10" className="mt-4 offset-sm-1">
+                                        <h6 className="text-uppercase text-center pb-2">Sign up with email</h6>
                                         <Form>
                                             <FormGroup>
-                                                <Label for="exampleEmail">Email</Label>
-                                                <Input type="email" name="email" id="exampleEmail" placeholder="with a placeholder" />
+                                                <Label for="exampleName" className="text-uppercase">Name</Label>
+                                                <Input type="text" name="name" id="exampleName" placeholder="name placeholder" />
                                             </FormGroup>
                                             <FormGroup>
-                                                <Label for="examplePassword">Password</Label>
+                                                <Label for="exampleEmail" className="text-uppercase">Email Address</Label>
+                                                <Input type="email" name="email" id="exampleEmail" placeholder="email placeholder" />
+                                            </FormGroup>
+                                            <FormGroup>
+                                                <Label for="examplePassword" className="text-uppercase">Password</Label>
                                                 <Input type="password" name="password" id="examplePassword" placeholder="password placeholder" />
                                             </FormGroup>
+                                            <div className="text-center mt-4 mb-3">
+                                                <SuccessOutlineButton><a href={'/'} className="text-uppercase px-5">Sign Up</a></SuccessOutlineButton>
+                                            </div>
                                         </Form>
                                     </Col>
                                 </Row>
+                                <hr className="w-75 mx-auto" />
+                                <p className="text-uppercase text-center mt-3">Sign Up with...</p>
+                                <div className="text-center mt-3 mb-4">
+                                    <SuccessOutlineButton onClick={this.toggle}><a href={'/'} className="text-uppercase"><i className="fab fa-facebook-square mr-2"></i>Facebook</a></SuccessOutlineButton>
+                                </div>
                             </TabPane>
                             <TabPane tabId="2">
                                 <Row>
                                     <Col sm="10" className="mt-4 offset-sm-1">
-                                        <h6 className="text-uppercase text-center pb-2">sign in with email</h6>
+                                        <h6 className="text-uppercase text-center pb-2">Sign in with email</h6>
                                         <Form>
                                             <FormGroup>
                                                 <Label for="exampleEmail" className="text-uppercase">Email Address</Label>
@@ -96,21 +106,20 @@ class Header extends Component {
                                                 <Label for="examplePassword" className="text-uppercase">Password</Label>
                                                 <Input type="password" name="password" id="examplePassword" placeholder="password placeholder" />
                                             </FormGroup>
-                                            <div className="d-flex justify-content-center mt-4 pb-3">
-                                                <SuccessOutlineButton className="text-uppercase"><a href={'/'}>Sign In</a></SuccessOutlineButton>
+                                            <div className="text-center mt-4 mb-3">
+                                                <SuccessOutlineButton><a href={'/'} className="text-uppercase px-5">Sign In</a></SuccessOutlineButton>
                                             </div>
                                         </Form>
                                     </Col>
                                 </Row>
+                                <hr className="w-75 mx-auto" />
+                                <p className="text-uppercase text-center mt-3">Sign In with...</p>
+                                <div className="text-center mt-3 mb-4">
+                                    <SuccessOutlineButton onClick={this.toggle}><a href={'/'}  className="text-uppercase"><i className="fab fa-facebook-square mr-2"></i>Facebook</a></SuccessOutlineButton>
+                                </div>
                             </TabPane>
                         </TabContent>
                     </ModalBody>
-                    <ModalFooter>
-                        <p className="text-uppercase">Sign In with...</p>
-                        <div className="d-flex justify-content-center mt-4 pb-3">
-                            <SuccessOutlineButton className="text-uppercase" onClick={this.toggle}><a href={'/'}>Facebook</a></SuccessOutlineButton>
-                        </div>
-                    </ModalFooter>
                 </Modal>
                 <Navbar color="dark" >
                     <NavbarToggler onClick={this.toggleNavbar} />
@@ -124,6 +133,12 @@ class Header extends Component {
                             </NavItem>
                             <NavItem>
                                 <NavLink href="/cart" className="text-white" >Cart</NavLink>
+                            </NavItem>
+                            <NavItem>
+                                <NavLink href="/profile" className="text-white" >Profile</NavLink>
+                            </NavItem>
+                            <NavItem>
+                                <NavLink href="/information" className="text-white" >Information</NavLink>
                             </NavItem>
                         </Nav>
                     </Collapse>
