@@ -140,6 +140,15 @@ class Header extends Component {
                             <NavItem>
                                 <NavLink href="/information" className="text-white" >Information</NavLink>
                             </NavItem>
+                            <NavItem>
+                                <NavLink href="/account" className="text-white">Account</NavLink>
+                            </NavItem>
+                            <NavItem>
+                                <NavLink href="/event" className="text-white">Event</NavLink>
+                            </NavItem>
+                            <NavItem>
+                                <NavLink href="/item" className="text-white">Item</NavLink>
+                            </NavItem>
                         </Nav>
                     </Collapse>
                     <div>

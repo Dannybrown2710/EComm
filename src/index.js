@@ -11,6 +11,9 @@ import Men from './components/men/Men';
 import Cart from './components/cart/Cart';
 import Profile from './components/Profile';
 import Information from './components/Information';
+import Account from './components/Account';
+import Event from './components/Event';
+import Item from './components/Item';
 
 const routes = (
     <BrowserRouter>
@@ -24,6 +27,9 @@ const routes = (
                         <Route path="/cart" component={Cart} />
                         <Route path="/profile" component={Profile} />
                         <Route path="/information" component={Information} />
+                        <Route path="/account" component={Account} />
+                        <Route path="/event" component={Event} />
+                        <Route path="/item" component={Item} />
                     </Switch>
                 </div>
             </App>

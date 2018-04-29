@@ -1,42 +1,36 @@
 import React, { Component } from 'react';
-import { Container, Row, Col } from "reactstrap";
+import { Container, Row, Col, Card } from "reactstrap";
 import './women.css';
 
+const images = require.context('../../images', true);
 export default class Contact extends Component {
-  render() {
-    return (
-      <div className="mt-5">
-        <img src={require('../../images/others/contact.png')} class="img-responsive imagebg" alt="logo" /><br />
-        <Container className="bg text-center mt-7">
-          <Row>
-            <Col md={12} xs={8}>
-              <h1>Contact InventFund</h1>
-              <h3>Get in touch with us to get the <b>cash flowing</b></h3>
-              <p>We know you're taught not to give in to all your desires, but this is one that we're willing to bet will have some serious <strong>longterm payoff.</strong><br />
-                At the very least, we'll gurantee ou a lively conversation
-              </p>
-            </Col>
-          </Row>
-          <Row className="mt-10 pb-2">
-            <Col md={4}>
-              <img src={require('../../images/others/maps.png')} alt="logo" /><br />
-              <p>
-                #265, 6<sup>th</sup> MAIN, 4<sup>th</sup> CROSS,<br />
-                2<sup>nd</sup> STAGE, BTM LAYOUT,<br />
-                BENGALURU - 560076
-              </p>
-            </Col>
-            <Col md={4}>
-              <img src={require('../../images/others/phone.png')} alt="logo" /><br />
-              <p>Office: <b>9916232160</b></p>
-            </Col>
-            <Col md={4}>
-              <img src={require('../../images/others/mail.png')} alt="logo" /><br />
-              <p>Email: <u>contact@gloify.com</u></p>
-            </Col>
-          </Row>
-        </Container>
-      </div>
-    );
-  }
+    render() {
+        let product = [
+            { "title": "Hamburger", "location": "Paris", "image": "./dress/dress1.png", "subcategory": "men", "price": "200" },
+            { "title": "Fries", "location": "Venice", "image": "./dress/dress2.png", "subcategory": "women", "price": "100" },
+            { "title": "Coke", "location": "New York", "image": "./dress/dress3.png", "subcategory": "men", "price": 50 },
+            { "title": "Pepsi", "location": "Manchester", "image": "./dress/dress1.png", "subcategory": "men", "price": 50 }
+        ];
+        return (
+            <div>
+                <Container>
+                    <h3 className="text-center my-4">Women</h3>
+                    <Row>
+                        {product && product.map((item, index) =>
+                            <Col lg={4} md={4} sm={6} xs={12} className="my-3">
+                                <Card>
+                                    <img alt="product image" src={images(product[index].image, true)} className="img-responsive p-3" />
+                                    <span>
+                                        <h5 className="pull-left">{product[index].title}</h5>
+                                        <h5 className="pull-left">{product[index].location}</h5>
+                                        <h5 className="pull-left">{product[index].price}</h5>
+                                    </span>
+                                </Card>
+                            </Col>
+                        )}
+                    </Row>
+                </Container>
+            </div>
+        );
+    }
 }
