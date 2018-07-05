@@ -1,0 +1,30 @@
+.fontFamily{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.navbar-color{
+    padding:0;
+    margin: 0;
+    background: rgba(255, 255, 255, 0) !important;
+}
+.middle{
+    position: relative;
+    left: -45%;
+}
+li>a{
+    color: #ffffff !important;
+    text-decoration: none !important;
+}
+
+.tabHeading>a{
+    color: #444444 !important;
+}
+
+.signinwith{
+    position: relative;
+    bottom: 8px;
+}
+.social{
+    position: relative;
+    right: 60px;
+    top: 50px;
+}

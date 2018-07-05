@@ -1,0 +1,49 @@
+.cartimg{
+    margin : 0;
+}
+
+  .item {
+    display: flex;
+  }
+   
+  .image {
+    margin-right: 50px;
+  }
+   
+  .description {
+    padding-top: 25px;
+    margin-right: 470px;
+    width: 115px;
+  }
+   
+  .quantity {
+    padding-top: 50px;
+    margin-right: 120px;
+    font-size: 20px;
+  }
+  .total-price {
+    width: 83px;
+    font-size: 20px;
+    padding-top: 50px;
+    text-align: center;
+    color: #43484D;
+    font-weight: 300;
+  }
+  @media (max-width: 800px) {
+    
+    .item {
+      height: auto;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .image img {
+      width: 50%;
+    }
+    .image,
+    .quantity,
+    .description {
+      width: 100%;
+      text-align: center;
+      margin: 6px 0;
+    }
+  }

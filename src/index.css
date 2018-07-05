@@ -1,5 +1,45 @@
-body {
+body,html {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
+  width: 100%;
+height: 100%;
+}
+
+a.nav-link{
+  /*color: white;*/
+}
+#root {
+    height: 100%;
+}
+.body-container{
+  position: relative;
+margin: 0;
+min-height: 100%;
+}
+
+footer.footer {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+}
+
+.footer {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 1rem;
+    background-color: #efefef;
+    text-align: center;
+}
+.c-i{
+  max-height: 300px;
+}
+
+.bg-light{
+  padding: 0 2rem;
+  border-radius: 10px;
+}
+.sidenav a:hover {
+  color: #818181;
 }
